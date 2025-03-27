@@ -1,0 +1,52 @@
+@use "../base/_mixin.scss" as *;
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: px-to-rem(664px);
+    background-color: var(--main-color);
+    transform: translateY(-100%);
+    transition: transform .5s;
+    @include responsive("tablet"){
+      position: static;
+      width: auto;
+      height: auto;
+      transform: none;
+      background-color: transparent;
+    }
+}
+
+.nav-list {
+ padding-top: px-to-rem(207px);
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+ @include responsive("tablet"){
+ padding-top: 0;
+ flex-direction: row;
+ }
+}
+
+.nav-item:not(:first-of-type){
+  margin-top: px-to-rem(50px);
+  @include responsive("tablet"){
+    margin: 0 0 0 px-to-rem(54px);
+  }
+}
+
+.nav-link{
+  font-weight: 500;
+  color: var(--base-color);
+  line-height: 1.5;
+}
+
+
+// 状態変化
+
+.nav.is-active{
+  transform: none;
+}

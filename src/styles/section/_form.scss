@@ -1,0 +1,42 @@
+@use"../base/_mixin.scss" as *;
+
+.form-body{
+    margin-top: px-to-rem(56px);
+}
+.form {
+    display: grid;
+    row-gap: px-to-rem(17px);
+}
+
+.form-title{
+    font-family: 'Inter', sans-serif; /* Interフォントを適用 */
+    line-height: px-to-rem(30px);
+    letter-spacing: 0.05em;
+}
+
+//　テキストボックス・テキストエリアカスタマイズ
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"]{
+    height: px-to-rem(30px);
+}
+
+textarea{
+    height: px-to-rem(171px);
+}
+
+.form-btn{
+    margin-top: px-to-rem(50px);
+    text-align: center;
+}
+

@@ -1,0 +1,29 @@
+<header class="header">
+    <div class="header-body">
+     <div class="header-wrapper">
+        <!-- logo -->
+        <h1 class="header-logo">
+            <a href="#">
+                <img width="123" height="22" src="../img/logo.png" alt="Christaのサイトロゴ">
+            </a>
+        </h1>
+        <!-- nav -->
+        <nav id="is-nav" class="nav" aria-hidden="true">
+            <ul class="nav-list">
+                <% navData.forEach((item)=>{ %>
+                 <li class="nav-item"><a class="nav-link" href="<%= item.link %>"><%= item.title %></a></li>
+                <%  }) %>
+            </ul>
+        </nav>
+        <!-- hamburger-menu -->
+        <button id="js-hamburger-menu"
+                class="hamburger-menu sp-only"
+                aria-controls="is-nav"
+                aria-expanded="false">
+          <span class="hamburger-menu-line"></span>
+          <span class="hamburger-menu-line"></span>
+          <span class="hamburger-menu-line"></span>
+        </button>
+     </div>
+    </div>
+</header>

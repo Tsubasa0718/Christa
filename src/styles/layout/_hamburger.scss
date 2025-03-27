@@ -1,0 +1,42 @@
+@use "../base/_mixin.scss" as *;
+
+.hamburger-menu{
+   position: fixed;
+   top: px-to-rem(23px);
+   right: px-clamp(15,123,375,2000);
+   z-index: 3;
+   width: px-to-rem(30px);
+   height: px-to-rem(30px);
+   cursor: pointer;
+}
+
+.hamburger-menu-line{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: px-to-rem(25px);
+  height: px-to-rem(2px);
+  background-color: var(--base-color);
+  transition: .3s;
+}
+
+.hamburger-menu-line:nth-child(1){
+    top: calc(50% - 8px);
+}
+.hamburger-menu-line:nth-child(3){
+    top: calc(50% + 8px);
+}
+
+// 状態変化
+.hamburger-menu.is-active > .hamburger-menu-line:nth-child(1){
+ top: 50%;
+ transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger-menu.is-active > .hamburger-menu-line:nth-child(2){
+ opacity: 0;
+}
+.hamburger-menu.is-active > .hamburger-menu-line:nth-child(3){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

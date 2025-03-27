@@ -1,0 +1,18 @@
+@use "../base/_mixin.scss" as *;
+
+.footer{
+  margin-top: px-to-rem(50px);
+  background-color: var(--main-color);
+}
+
+.footer-body{
+    padding: px-clamp(15,23,375,2000) 0 px-clamp(15,26,375,2000) 0;
+}
+
+.footer-copy{
+    display: block;
+    text-align: center;
+    font-size: px-to-rem(14px);
+    line-height: px-to-rem(30px);
+    color: var(--base-color);
+}

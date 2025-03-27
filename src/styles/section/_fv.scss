@@ -1,0 +1,25 @@
+@use"../base/_mixin.scss" as *;
+
+.fv{
+  //headerの高さ分余白を入れる
+  margin-top: px-to-rem(74px);
+  position: relative;
+  background-image: url(../img/fv-bgi.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: px-clamp(590,740,375,2000);
+}
+
+.fv-title{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ padding: px-clamp(30,35,375,2000) px-clamp(40,42,375,2000);
+ font-size: px-clamp(30,50,375,2000);
+ font-weight: 500;
+ color: var(--base-color);
+ border: px-to-rem(2px) solid var(--base-color);
+ letter-spacing: 0.05em; /* em単位ならフォントサイズの割合で反映されます */
+}

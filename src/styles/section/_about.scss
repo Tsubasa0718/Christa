@@ -1,0 +1,25 @@
+@use"../base/_mixin.scss" as *;
+
+.about {
+  margin-top: px-to-rem(102px);
+  }
+
+.about-body{
+
+  margin-top: px-to-rem(69px);
+}
+.about-title{
+ font-size: px-clamp(20,24,375,2000);
+ font-family: 'Inter', sans-serif; /* Interフォントを適用 */
+ line-height: px-to-rem(40px);
+
+}
+.about-text-body{
+  margin-top: px-clamp(18,28,375,2000);
+}
+.about-text{
+  font-size: px-to-rem(14px);
+  font-family: 'Inter', sans-serif; /* Interフォントを適用 */
+  line-height: px-to-rem(30px);
+  letter-spacing: 0.05em;
+}

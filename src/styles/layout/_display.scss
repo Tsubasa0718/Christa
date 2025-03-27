@@ -1,0 +1,8 @@
+@use "../base/_responsive.scss" as *;
+
+.sp-only{
+  display: block;
+  @include responsive("tablet"){
+  display: none;
+  }
+}

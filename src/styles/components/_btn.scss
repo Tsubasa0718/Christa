@@ -1,0 +1,19 @@
+@use"../base/_mixin.scss" as *;
+
+.btn{
+  display: inline-block;
+  font-family: 'Inter', sans-serif; /* Interフォントを適用 */
+  padding: px-to-rem(15px) 0;
+  font-size: px-to-rem(20px);
+  line-height: 1.5;
+  letter-spacing: .05em;
+  width: px-to-rem(235px);
+  border-radius: px-to-rem(50px);
+}
+
+// form
+
+.btn--submit{
+  color: var(--base-color);
+  background-color: var(--main-color);
+}

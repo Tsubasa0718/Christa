@@ -1,0 +1,21 @@
+@use "../base/_mixin.scss" as *;
+
+.header{
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1;
+ width: 100%;
+ height: px-to-rem(74px);
+ background-color: var(--main-color);
+}
+
+.header-body{
+ padding: px-to-rem(23px) px-clamp(15,123,375,2000) px-clamp(23,27,375,2000) px-clamp(15,123,375,2000);
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

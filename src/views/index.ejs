@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christa Designは、ミニマルで洗練されたデザインを提供するクリエイティブチームです。ブランディングからWeb制作、リリース後のサポートまで、一貫したサービスでお客様のビジネスを支えます。">
+    <meta name="robots" content="noindex , nofollow">
+    <!-- OGP -->
+    <meta property="og:title" content="クリ★スタ">
+    <meta property="og:description" content="Christa Designは、ミニマルで洗練されたデザインを提供するクリエイティブチームです。ブランディングからWeb制作、リリース後のサポートまで、一貫したサービスでお客様のビジネスを支えます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Christa-website.netlify.app/">
+    <meta property="og:image" content="https://Christa-website.netlify.app/img/OGP.png">
+    <!-- Google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- ファビコンの設定 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>クリ★スタ</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- css -->
+</head>
+<body>
+  <%- include('./layout/_header.ejs') %>
+  <%- include('./parts/_fv.ejs') %>
+   <main class="main">
+    <%- include('./section/_about.ejs') %>
+    <%- include('./section/_service.ejs') %>
+    <%- include('./section/_news.ejs') %>
+    <%- include('./section/_contact.ejs') %>
+   </main>
+  <%- include('./layout/_footer.ejs') %>
+  <script src="/js/index.js"></script>
+</body>
+</html>

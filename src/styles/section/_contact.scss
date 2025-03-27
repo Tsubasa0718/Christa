@@ -1,0 +1,13 @@
+@use "../base/_rem.scss" as *;
+
+.contact{
+    margin-top: px-to-rem(144px);
+}
+
+.contact-title{
+  text-align: center;
+  font-size: px-to-rem(24px);
+  font-family: 'Inter', sans-serif; /* Interフォントを適用 */
+  line-height: 2;
+  letter-spacing: 0.1em;
+}

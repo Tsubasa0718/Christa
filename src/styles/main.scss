@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// base
+@use"./base/_index.scss" as base;
+// layout
+@use"./layout/_index.scss" as layout;
+// components
+@use"./components/_index.scss" as components;
+// section
+@use"./section/_index.scss" as section;
+// themes
+@use"./themes/_index.scss" as themes;
