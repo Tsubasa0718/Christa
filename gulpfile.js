@@ -1,3 +1,4 @@
+import { src, dest } from "gulp";
 import gulp from "gulp";
 import ejs from "gulp-ejs";
 import rename from "gulp-rename";
@@ -13,6 +14,7 @@ import fs from "fs";
 import autoprefixer from "gulp-autoprefixer";
 import groupCssMediaQueries from "gulp-group-css-media-queries"; // パッケージをインポート
 import { navData, cardData } from "./src/data/data.js"; // ✅ データをインポート
+
 
 const bs = browserSync.create();
 const sass = gulpSass(dartSass);
@@ -82,12 +84,14 @@ const CopyImages = () => {
     .pipe(gulp.dest("dist/img")); // dist/img にコピー
 };
 
-// ファビコンコピータスク
+
+// ファビコンをdistにコピー
 const CopyFavicon = () => {
-  return gulp
-    .src("favicon.ico") // ルートディレクトリに配置しているファビコンを取得
-    .pipe(gulp.dest("dist")); // dist フォルダにコピー
+  return src("favicon.ico",{encoding:false}) // ルートディレクトリのfaviconを指定
+    .pipe(dest("dist")); // distフォルダに出力
 };
+
+
 
 
 // HTML Cache Busting Links
